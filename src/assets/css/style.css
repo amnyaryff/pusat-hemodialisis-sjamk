@@ -390,6 +390,19 @@ p { text-wrap: pretty; }
 .splitrow__media img { width: 100%; border-radius: var(--r-lg); background: var(--primary-tint); display: block; }
 .splitrow__body .ticklist { max-width: none; }
 
+/* balanced: image column matches the height of the content beside it */
+@media (min-width: 900px) {
+  .splitrow--balanced { align-items: stretch; }
+  .splitrow--balanced .splitrow__media { position: relative; min-height: 20rem; }
+  .splitrow--balanced .splitrow__media img {
+    position: absolute; inset: 0; height: 100%;
+    object-fit: cover; object-position: 50% 32%;
+  }
+}
+@media (max-width: 899px) {
+  .splitrow--balanced .splitrow__media img { max-height: 24rem; object-fit: cover; object-position: 50% 32%; }
+}
+
 .ticklist { list-style: none; padding: 0; display: grid; gap: .85rem; margin-top: 1.4rem; }
 .ticklist li { position: relative; padding-left: 2.1rem; }
 .ticklist li::before { content: ""; position: absolute; left: 0; top: .18em; width: 1.3rem; height: 1.3rem; border-radius: 50%; background: var(--primary); }
@@ -469,7 +482,7 @@ p { text-wrap: pretty; }
 /* ---------- CTA (fallback for page.njk) ------------------------------- */
 .cta__inner { display: grid; gap: 1.6rem; }
 @media (min-width: 820px) { .cta__inner { grid-template-columns: 1fr auto; align-items: center; gap: 2.5rem; } }
-.cta__text { font-size: clamp(1.4rem, 1.1rem + 1.5vw, 2rem); font-weight: 700; color: #fff; max-width: 22ch; line-height: 1.25; }
+.cta__text { font-size: clamp(1.4rem, 1.1rem + 1.5vw, 2rem); font-weight: 700; color: #fff; max-width: 30ch; line-height: 1.25; white-space: pre-line; }
 .cta__actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
 .cta__phone { color: #fff; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: .5rem; }
 
