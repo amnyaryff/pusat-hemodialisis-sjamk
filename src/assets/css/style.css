@@ -534,6 +534,24 @@ p { text-wrap: pretty; }
   .contact__dl dt { margin-top: .6rem; }
 
   .location__actions, .location .hero__actions { justify-content: center; }
+
+  /* centre card content on mobile */
+  .card, .doc__body, .tcard { text-align: center; }
+  .card--value { align-items: center; }
+  .tcard__who { justify-content: center; }
+
+  /* Nilai Kami: 2x2 grid on mobile */
+  .splitrow__body .cards--2 { grid-template-columns: 1fr 1fr; gap: .8rem; }
+  .splitrow__body .card--value { padding: 1.15rem 1rem; }
+
+  /* blog listing: one card per row */
+  .bgrid--wide { flex-direction: column; align-items: center; }
+  .bgrid--wide .bcard { flex: 0 1 auto; width: 100%; max-width: 24rem; }
+
+  /* CTA band + footer intro: centred text */
+  .cta__inner { text-align: center; }
+  .cta__text { margin-inline: auto; }
+  .site-footer__brand p { margin-inline: auto; }
 }
 
 /* ---------- motion ------------------------------------------------------- */
