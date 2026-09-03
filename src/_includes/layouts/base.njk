@@ -3,9 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }} · {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
-  <meta name="description" content="{{ description or site.tagline_ms }}">
+  {%- set metaTitle = (title + " · " + site.name) if title else site.name %}
+  {%- set metaDesc = description or site.tagline_ms %}
+  {%- set metaImage = site.url + "/assets/img/logo.png" %}
+  <title>{{ metaTitle }}</title>
+  <meta name="description" content="{{ metaDesc }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <meta name="theme-color" content="#07306e">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ metaTitle }}">
+  <meta property="og:description" content="{{ metaDesc }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ metaImage }}">
+  <meta property="og:image:width" content="2000">
+  <meta property="og:image:height" content="2000">
+  <meta property="og:image:alt" content="Logo Pusat Hemodialisis SJAMK">
+  <meta property="og:locale" content="ms_MY">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ metaTitle }}">
+  <meta name="twitter:description" content="{{ metaDesc }}">
+  <meta name="twitter:image" content="{{ metaImage }}">
   <link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
