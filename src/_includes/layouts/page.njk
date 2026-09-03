@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+<section class="page-head">
+  <div class="wrap">
+    {% if pageEyebrowKey %}<p class="eyebrow" data-i18n="{{ pageEyebrowKey }}">{{ i18n.ms[pageEyebrowKey] }}</p>{% endif %}
+    {% if pageTitleKey %}<h1 data-i18n="{{ pageTitleKey }}">{{ i18n.ms[pageTitleKey] }}</h1>{% endif %}
+    {% if pageIntroKey %}
+    <p class="lead" data-i18n="{{ pageIntroKey }}">{{ i18n.ms[pageIntroKey] }}</p>
+    {% endif %}
+  </div>
+</section>
+
+{{ content | safe }}
+
+{% include "partials/cta.njk" %}

@@ -1,0 +1,12 @@
+<ul class="panels">
+  {% for p in panel.items %}
+  <li>
+    <img class="p-logo" src="{{ p.logo }}" alt="">
+    <span class="p-name">{{ p.name }}</span>
+    <span class="p-note" data-i18n-obj data-ms="{{ p.note_ms }}" data-en="{{ p.note_en }}">{{ p.note_ms }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% if showPanelNote and panel.note_ms %}
+<p class="panels-note" data-i18n-obj data-ms="{{ panel.note_ms }}" data-en="{{ panel.note_en }}">{{ panel.note_ms }}</p>
+{% endif %}

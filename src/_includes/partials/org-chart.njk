@@ -1,0 +1,14 @@
+<div class="org">
+  {% for t in [0, 1, 2, 3, 4] %}
+  <div class="org__tier">
+    {% for m in team.chart %}
+    {% if m.tier == t %}
+    <div class="org__node">
+      <span class="org__name"><span>{{ m.n1 }}</span><span>{{ m.n2 }}</span></span>
+      <span class="org__role" data-i18n-obj data-ms="{{ m.role_ms }}" data-en="{{ m.role_en }}">{{ m.role_ms }}</span>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>

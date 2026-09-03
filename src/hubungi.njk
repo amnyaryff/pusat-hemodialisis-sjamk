@@ -1,0 +1,63 @@
+---
+layout: layouts/page.njk
+permalink: /hubungi/
+title: Hubungi Kami
+pageTitleKey: contact.title
+pageIntroKey: contact.intro
+description: "Alamat, telefon, WhatsApp, waktu operasi dan soalan lazim Pusat Hemodialisis SJAMK."
+---
+
+<section class="section">
+  <div class="wrap contact">
+    <div class="contact__info">
+      <dl class="contact__dl">
+        <dt data-i18n="contact.addressLabel">{{ i18n.ms["contact.addressLabel"] }}</dt>
+        <dd>{{ site.address }}</dd>
+        <dt data-i18n="contact.phoneLabel">{{ i18n.ms["contact.phoneLabel"] }}</dt>
+        <dd><a data-tel href="#">{{ site.phoneDisplay }}</a></dd>
+        <dt data-i18n="contact.emailLabel">{{ i18n.ms["contact.emailLabel"] }}</dt>
+        <dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
+      </dl>
+      <div class="hero__actions">
+        <a class="btn" data-wa href="#">
+          <svg class="ic" aria-hidden="true"><use href="#ic-wa"/></svg>
+          <span data-i18n="home.cta.appt">{{ i18n.ms["home.cta.appt"] }}</span>
+        </a>
+      </div>
+
+      <h2 class="mt-2" data-i18n="contact.hoursTitle">{{ i18n.ms["contact.hoursTitle"] }}</h2>
+      <table class="hours">
+        <tbody>
+          {% for h in site.hours %}
+          <tr>
+            <th scope="row" data-i18n-obj data-ms="{{ h.hari_ms }}" data-en="{{ h.hari_en }}">{{ h.hari_ms }}</th>
+            <td data-i18n-obj data-ms="{{ h.masa_ms }}" data-en="{{ h.masa_en }}">{{ h.masa_ms }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="contact__map">
+      <div class="location__map">
+        <iframe title="Peta {{ site.name }}" src="{{ site.mapsEmbed }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="shead shead--center">
+      <h2 data-i18n="contact.faqTitle">{{ i18n.ms["contact.faqTitle"] }}</h2>
+    </div>
+    <div class="faq">
+      {% for n in ["1", "2", "3", "4", "5", "6"] %}
+      <details class="faq__item">
+        <summary data-i18n="contact.faq.q{{ n }}">{{ i18n.ms["contact.faq.q" + n] }}</summary>
+        <p data-i18n="contact.faq.a{{ n }}">{{ i18n.ms["contact.faq.a" + n] }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>

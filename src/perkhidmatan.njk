@@ -1,0 +1,62 @@
+---
+layout: layouts/page.njk
+permalink: /perkhidmatan/
+title: Perkhidmatan
+pageTitleKey: services.title
+pageIntroKey: services.intro
+description: "Hemodialisis, pengangkutan pesakit, dan senarai panel yang diterima di Pusat Hemodialisis SJAMK."
+---
+
+<section class="section">
+  <div class="wrap splitrow">
+    <div class="splitrow__media">
+      <img src="/assets/img/hero-figure.svg" alt="Ilustrasi rawatan hemodialisis">
+    </div>
+    <div class="splitrow__body">
+      <h2 data-i18n="services.hd.title">{{ i18n.ms["services.hd.title"] }}</h2>
+      <p class="lead" data-i18n="services.hd.desc">{{ i18n.ms["services.hd.desc"] }}</p>
+      <ul class="ticklist">
+        {% for n in ["1", "2", "3", "4", "5", "6", "7"] %}
+        <li data-i18n="services.hd.{{ n }}">{{ i18n.ms["services.hd." + n] }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="pengangkutan">
+  <div class="wrap wrap--narrow center">
+    <h2 data-i18n="services.transport.title">{{ i18n.ms["services.transport.title"] }}</h2>
+    <p class="lead" data-i18n="services.transport.desc">{{ i18n.ms["services.transport.desc"] }}</p>
+    <a class="btn btn--sm" data-wa href="#" style="margin-top:1.2rem">
+      <svg class="ic" aria-hidden="true"><use href="#ic-wa"/></svg>
+      <span data-i18n="home.cta.appt">{{ i18n.ms["home.cta.appt"] }}</span>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="panel">
+  <div class="wrap">
+    <div class="shead shead--center">
+      <h2 data-i18n="services.panel.title">{{ i18n.ms["services.panel.title"] }}</h2>
+    </div>
+    {% set showPanelNote = true %}
+    {% include "partials/panel.njk" %}
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap splitrow splitrow--rev">
+    <div class="splitrow__media">
+      <img src="/assets/img/about-figure.svg" alt="Ilustrasi persediaan lawatan pertama">
+    </div>
+    <div class="splitrow__body">
+      <h2 data-i18n="services.prep.title">{{ i18n.ms["services.prep.title"] }}</h2>
+      <ul class="ticklist">
+        {% for n in ["1", "2", "3", "4"] %}
+        <li data-i18n="services.prep.{{ n }}">{{ i18n.ms["services.prep." + n] }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

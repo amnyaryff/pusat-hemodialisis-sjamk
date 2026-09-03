@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+  <div class="wrap wrap--narrow">
+    <p class="post__back"><a href="/blog/" data-i18n="common.backToBlog">{{ i18n.ms["common.backToBlog"] }}</a></p>
+    <h1 class="post__title">{{ title }}</h1>
+    <p class="post__meta">
+      {% if author %}<span data-i18n="common.by">{{ i18n.ms["common.by"] }}</span> {{ author }}<br>{% endif %}
+      <time datetime="{{ page.date | isoDate }}">{{ page.date | tarikhBM }}</time>
+    </p>
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>
+
+{% include "partials/cta.njk" %}

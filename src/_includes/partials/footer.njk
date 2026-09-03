@@ -1,0 +1,46 @@
+<footer class="site-footer">
+  <div class="wrap site-footer__top">
+    <div class="site-footer__brand">
+      <a class="brand" href="/" style="color:#fff">
+        <img class="brand__logo" src="/assets/img/logo.svg" alt="" width="34" height="34">
+        <span class="brand__name" style="color:#fff">{{ site.name }}</span>
+      </a>
+      <p data-i18n="footer.about">{{ i18n.ms["footer.about"] }}</p>
+    </div>
+
+    <div>
+      <h2 data-i18n="footer.quick">{{ i18n.ms["footer.quick"] }}</h2>
+      <ul>
+        <li><a href="/perkhidmatan/" data-i18n="nav.services">{{ i18n.ms["nav.services"] }}</a></li>
+        <li><a href="/organisasi/" data-i18n="nav.doctors">{{ i18n.ms["nav.doctors"] }}</a></li>
+        <li><a href="/tentang/" data-i18n="nav.about">{{ i18n.ms["nav.about"] }}</a></li>
+        <li><a href="/blog/" data-i18n="nav.blog">{{ i18n.ms["nav.blog"] }}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 data-i18n="footer.contact">{{ i18n.ms["footer.contact"] }}</h2>
+      <ul>
+        <li>{{ site.address }}</li>
+        <li><a data-tel href="#">{{ site.phoneDisplay }}</a></li>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 data-i18n="footer.updatesTitle">{{ i18n.ms["footer.updatesTitle"] }}</h2>
+      <p data-i18n="footer.updatesText" style="font-size:.9rem">{{ i18n.ms["footer.updatesText"] }}</p>
+      <a class="btn btn--wa" data-wa href="#" style="margin-top:.8rem">
+        <svg class="ic" aria-hidden="true"><use href="#ic-wa"/></svg>
+        <span data-i18n="home.cta.appt">{{ i18n.ms["home.cta.appt"] }}</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-footer__base">
+    <div class="wrap">
+      <p>&copy; <span data-year>2026</span> {{ site.name }}. <span data-i18n="footer.rights">{{ i18n.ms["footer.rights"] }}</span></p>
+      <p data-i18n="footer.disclaimer">{{ i18n.ms["footer.disclaimer"] }}</p>
+    </div>
+  </div>
+</footer>

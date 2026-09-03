@@ -1,0 +1,30 @@
+---
+layout: layouts/page.njk
+permalink: /organisasi/
+title: Organisasi
+pageTitleKey: doctors.title
+pageIntroKey: doctors.intro
+description: "Doktor pakar nefrologi, doktor GP, dan carta organisasi 11 jawatan di Pusat Hemodialisis SJAMK."
+---
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead shead--center">
+      <h2 data-i18n="doctors.profilesTitle">{{ i18n.ms["doctors.profilesTitle"] }}</h2>
+    </div>
+    <div class="docs">
+      {% for doc in team.doctors %}
+        {% include "partials/doctor-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="shead shead--center">
+      <h2 data-i18n="doctors.chartTitle">{{ i18n.ms["doctors.chartTitle"] }}</h2>
+    </div>
+    {% include "partials/org-chart.njk" %}
+  </div>
+</section>

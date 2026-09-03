@@ -1,0 +1,14 @@
+{
+  "name": "pusat-hemodialisis-sjamk",
+  "version": "1.0.0",
+  "description": "Laman web Pusat Hemodialisis SJAMK (Eleventy, dwibahasa BM/EN)",
+  "private": true,
+  "scripts": {
+    "dev": "eleventy --serve --quiet",
+    "build": "eleventy",
+    "clean": "node -e \"require('fs').rmSync('_site',{recursive:true,force:true})\""
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "note_ms": "",
+  "note_en": "",
+  "items": [
+    { "name": "Kumpulan Wang Amanah Persaraan (KWAP) / JPA", "logo": "/assets/img/panel/kwap.svg", "note_ms": "Panel pesara kerajaan", "note_en": "Government pensioner panel" },
+    { "name": "Jabatan Hal Ehwal Veteran (JHEV) ATM", "logo": "/assets/img/panel/jhev.svg", "note_ms": "Panel veteran ATM", "note_en": "Armed forces veteran panel" },
+    { "name": "Pertubuhan Keselamatan Sosial (PERKESO)", "logo": "/assets/img/panel/perkeso.svg", "note_ms": "Panel PERKESO / SOCSO", "note_en": "PERKESO / SOCSO panel" },
+    { "name": "Kerajaan Negeri Kelantan", "logo": "/assets/img/panel/kelantan.svg", "note_ms": "Panel kakitangan kerajaan negeri", "note_en": "State government staff panel" },
+    { "name": "Pejabat Pendidikan Daerah Pasir Mas", "logo": "/assets/img/panel/ppd.svg", "note_ms": "Panel warga pendidikan", "note_en": "Education staff panel" },
+    { "name": "Lembaga Kemajuan Kelantan Selatan (KESEDAR)", "logo": "/assets/img/panel/kesedar.svg", "note_ms": "Panel KESEDAR", "note_en": "KESEDAR panel" },
+    { "name": "Majlis Amanah Rakyat (MARA)", "logo": "/assets/img/panel/mara.svg", "note_ms": "Panel MARA", "note_en": "MARA panel" }
+  ]
+}

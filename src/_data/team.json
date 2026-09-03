@@ -1,0 +1,36 @@
+{
+  "chart": [
+    { "tier": 0, "n1": "Dr. Wan Hazuraini", "n2": "binti Wan Zain", "name": "Dr. Wan Hazuraini binti Wan Zain", "role_ms": "Pengarah", "role_en": "Director" },
+    { "tier": 1, "n1": "Dr. Azimah", "n2": "binti Fakri", "name": "Dr. Azimah binti Fakri", "role_ms": "Doktor Pakar Nefrologi", "role_en": "Consultant Nephrologist" },
+    { "tier": 2, "n1": "Tengku Mohd Adham", "n2": "bin Tuan Ibrahim", "name": "Tengku Mohd Adham bin Tuan Ibrahim", "role_ms": "Pengurus", "role_en": "Manager" },
+    { "tier": 2, "n1": "Mohd Hafiz Ikhmal", "n2": "bin Mohd Nor", "name": "Mohd Hafiz Ikhmal bin Mohd Nor", "role_ms": "Pembantu Pengurus", "role_en": "Assistant Manager" },
+    { "tier": 3, "n1": "Rohana", "n2": "binti Muhamad", "name": "Rohana binti Muhamad", "role_ms": "Ketua Jururawat Post-Basic Nefrologi", "role_en": "Head Nurse (Post-Basic Nephrology)" },
+    { "tier": 4, "n1": "Nur Athirah", "n2": "binti Abdullah", "name": "Nur Athirah binti Abdullah", "role_ms": "Jururawat Post-Basic MA", "role_en": "Post-Basic Nurse (MA)" },
+    { "tier": 4, "n1": "Nurdini Wahidah", "n2": "binti Mohamed", "name": "Nurdini Wahidah binti Mohamed", "role_ms": "Pembantu Perubatan Post-Basic", "role_en": "Post-Basic Medical Assistant" },
+    { "tier": 4, "n1": "Norfilzah", "n2": "binti Mohamad Abdul Sarif", "name": "Norfilzah binti Mohamad Abdul Sarif", "role_ms": "Jururawat", "role_en": "Staff Nurse" },
+    { "tier": 4, "n1": "Mohd Shuib", "n2": "bin Mokhtar", "name": "Mohd Shuib bin Mokhtar", "role_ms": "Pembantu Dialisis", "role_en": "Dialysis Assistant" },
+    { "tier": 4, "n1": "Luqman Hakim", "n2": "bin Shamsudeen", "name": "Luqman Hakim bin Shamsudeen", "role_ms": "Pembantu Dialisis", "role_en": "Dialysis Assistant" }
+  ],
+  "doctors": [
+    {
+      "name": "Dr. Azimah binti Fakri",
+      "role_ms": "Doktor Pakar Nefrologi",
+      "role_en": "Consultant Nephrologist",
+      "photo": "/assets/img/avatar.svg",
+      "credentials_ms": "MD (Universiti Sains Malaysia) · Pendaftaran Penuh MMC No. 50800 (2011)",
+      "credentials_en": "MD (Universiti Sains Malaysia) · MMC Full Registration No. 50800 (2011)",
+      "bio_ms": "Menyelia rawatan setiap pesakit, menilai kecukupan dialisis serta menguruskan komplikasi berkaitan penyakit buah pinggang kronik. Menjalankan sesi rondaan pakar secara berkala di pusat dialisis.",
+      "bio_en": "Supervises each patient's care, reviews dialysis adequacy, and manages complications related to chronic kidney disease. Conducts periodic specialist rounds at the dialysis centre."
+    },
+    {
+      "name": "Dr. Wan Hazuraini binti Wan Zain",
+      "role_ms": "Doktor GP",
+      "role_en": "General Practitioner",
+      "photo": "/assets/img/avatar.svg",
+      "credentials_ms": "MD (Universiti Sains Malaysia) · Pendaftaran Penuh MMC No. 35966 (1999)",
+      "credentials_en": "MD (Universiti Sains Malaysia) · MMC Full Registration No. 35966 (1999)",
+      "bio_ms": "Melaksanakan penilaian mingguan pesakit sebelum dan selepas sesi dialisis, termasuk pemantauan tekanan darah serta membuat rujukan segera kepada pihak berkaitan apabila diperlukan.",
+      "bio_en": "Carries out weekly patient assessments before and after dialysis sessions, including blood-pressure monitoring, and makes prompt referrals to the relevant parties when needed."
+    }
+  ]
+}

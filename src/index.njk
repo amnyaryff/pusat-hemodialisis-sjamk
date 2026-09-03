@@ -1,0 +1,225 @@
+---
+layout: layouts/base.njk
+permalink: /
+description: "Pusat Hemodialisis SJAMK — sesi hemodialisis di bawah penyeliaan doktor pakar di Pasir Mas, Kelantan, dengan kemudahan pengangkutan dari rumah."
+---
+
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <h1 class="hero__title" data-i18n="home.hero.headline">{{ i18n.ms["home.hero.headline"] }}</h1>
+      <p class="hero__sub" data-i18n="home.hero.sub">{{ i18n.ms["home.hero.sub"] }}</p>
+      <div class="hero__cta">
+        <a class="btn" data-wa href="#">
+          <svg class="ic" aria-hidden="true"><use href="#ic-wa"/></svg>
+          <span data-i18n="home.cta.appt">{{ i18n.ms["home.cta.appt"] }}</span>
+        </a>
+        <a class="hero__phone" data-tel href="#">
+          <span class="iconcircle iconcircle--tint"><svg class="ic" aria-hidden="true"><use href="#ic-phone"/></svg></span>
+          {{ site.phoneDisplay }}
+        </a>
+      </div>
+    </div>
+    <div class="hero__art">
+      <img src="/assets/img/hero-figure.svg" alt="Ilustrasi penjagaan pesakit hemodialisis">
+    </div>
+  </div>
+</section>
+
+<section class="hero-strip">
+  <div class="wrap">
+    <div class="hero-strip__inner">
+      <div class="hero-strip__item">
+        <span class="iconcircle"><svg class="ic" aria-hidden="true"><use href="#ic-usermd"/></svg></span>
+        <div>
+          <h3 data-i18n="home.strip.1t">{{ i18n.ms["home.strip.1t"] }}</h3>
+          <p data-i18n="home.strip.1d">{{ i18n.ms["home.strip.1d"] }}</p>
+        </div>
+      </div>
+      <div class="hero-strip__item">
+        <span class="iconcircle"><svg class="ic" aria-hidden="true"><use href="#ic-van"/></svg></span>
+        <div>
+          <h3 data-i18n="home.strip.2t">{{ i18n.ms["home.strip.2t"] }}</h3>
+          <p data-i18n="home.strip.2d">{{ i18n.ms["home.strip.2d"] }}</p>
+        </div>
+      </div>
+      <div class="hero-strip__item">
+        <span class="iconcircle"><svg class="ic" aria-hidden="true"><use href="#ic-badge"/></svg></span>
+        <div>
+          <h3 data-i18n="home.strip.3t">{{ i18n.ms["home.strip.3t"] }}</h3>
+          <p data-i18n="home.strip.3d">{{ i18n.ms["home.strip.3d"] }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap about">
+    <div class="about__img">
+      <img src="/assets/img/dialysis-treatment.jpeg" alt="Sesi rawatan hemodialisis di Pusat Hemodialisis SJAMK" loading="lazy" width="743" height="984">
+    </div>
+    <div>
+      <h2 data-i18n="home.about.title">{{ i18n.ms["home.about.title"] }}</h2>
+      <p data-i18n="home.about.body">{{ i18n.ms["home.about.body"] }}</p>
+      <div class="about__box">
+        <ul class="about__list">
+          {% for n in ["1", "2", "3", "4"] %}
+          <li><svg class="ic" aria-hidden="true"><use href="#ic-check"/></svg><span data-i18n="home.about.pt{{ n }}">{{ i18n.ms["home.about.pt" + n] }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section band--navy">
+  <div class="wrap">
+    <div class="shead shead--center">
+      <h2 data-i18n="home.panel.title">{{ i18n.ms["home.panel.title"] }}</h2>
+    </div>
+  </div>
+  {% include "partials/panel-marquee.njk" %}
+</section>
+
+<section class="section band--tint">
+  <div class="wrap">
+    <div class="shead shead--center">
+      <h2 data-i18n="home.services.title">{{ i18n.ms["home.services.title"] }}</h2>
+    </div>
+    <div class="cardgrid cardgrid--3">
+      {% set svcIcons = ["ic-kidney", "ic-van", "ic-drop", "ic-shield", "ic-syringe", "ic-suitcase", "ic-apple"] %}
+      {% for n in ["1", "2", "3", "4", "5", "6", "7"] %}
+      <article class="scard">
+        <span class="iconcircle"><svg class="ic" aria-hidden="true"><use href="#{{ svcIcons[loop.index0] }}"/></svg></span>
+        <h3 data-i18n="home.svc.{{ n }}t">{{ i18n.ms["home.svc." + n + "t"] }}</h3>
+        <p data-i18n="home.svc.{{ n }}d">{{ i18n.ms["home.svc." + n + "d"] }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap consult">
+    <div>
+      <h2 data-i18n="home.why.title">{{ i18n.ms["home.why.title"] }}</h2>
+      <p data-i18n="home.why.sub">{{ i18n.ms["home.why.sub"] }}</p>
+    </div>
+    <div class="pill-list">
+      {% for n in ["1", "2", "3", "5"] %}
+      <div class="pill-row">
+        <span class="iconcircle iconcircle--tint iconcircle--sm"><svg class="ic" aria-hidden="true"><use href="#ic-shield"/></svg></span>
+        <span data-i18n="home.why.{{ n }}">{{ i18n.ms["home.why." + n] }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section band--tint">
+  <div class="wrap">
+    <div class="shead shead--center">
+      <h2 data-i18n="home.team.title">{{ i18n.ms["home.team.title"] }}</h2>
+    </div>
+    <div class="docs">
+      {% for doc in team.doctors %}
+        {% include "partials/doctor-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="shead shead--center">
+      <h2 data-i18n="home.testi.title">{{ i18n.ms["home.testi.title"] }}</h2>
+    </div>
+    <div class="tgrid">
+      {% for n in ["1", "2", "3"] %}
+      <blockquote class="tcard">
+        <svg class="tcard__q" aria-hidden="true"><use href="#ic-quote"/></svg>
+        <p data-i18n="home.testi.{{ n }}">{{ i18n.ms["home.testi." + n] }}</p>
+        <div class="tcard__stars" aria-hidden="true">★★★★★</div>
+        <footer class="tcard__who">
+          <span class="tcard__ava"></span>
+          <span>
+            <span class="tcard__name" data-i18n="home.testi.{{ n }}n">{{ i18n.ms["home.testi." + n + "n"] }}</span><br>
+            <span class="tcard__role" data-i18n="home.testi.{{ n }}r">{{ i18n.ms["home.testi." + n + "r"] }}</span>
+          </span>
+        </footer>
+      </blockquote>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section band--navy">
+  <div class="wrap">
+    <ul class="statgrid" style="list-style:none;padding:0">
+      {% set statIcons = ["ic-users", "ic-calendar", "ic-badge", "ic-clock"] %}
+      {% for s in stats.items %}
+      <li class="stat">
+        <span class="iconcircle"><svg class="ic" aria-hidden="true"><use href="#{{ statIcons[loop.index0] }}"/></svg></span>
+        <div class="stat__num" data-count="{{ s.value }}" data-suffix="{{ s.suffix }}">0{{ s.suffix }}</div>
+        <div class="stat__label" data-i18n-obj data-ms="{{ s.label_ms }}" data-en="{{ s.label_en }}">{{ s.label_ms }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section band--tint" id="lokasi">
+  <div class="wrap">
+    <div class="location">
+      <div>
+        <h2 data-i18n="home.location.title">{{ i18n.ms["home.location.title"] }}</h2>
+        <p class="location__addr">{{ site.address }}</p>
+        <table class="hours">
+          <caption data-i18n="contact.hoursTitle">{{ i18n.ms["contact.hoursTitle"] }}</caption>
+          <tbody>
+            {% for h in site.hours %}
+            <tr>
+              <th scope="row" data-i18n-obj data-ms="{{ h.hari_ms }}" data-en="{{ h.hari_en }}">{{ h.hari_ms }}</th>
+              <td data-i18n-obj data-ms="{{ h.masa_ms }}" data-en="{{ h.masa_en }}">{{ h.masa_ms }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <div class="hero__actions">
+          <a class="btn" data-wa href="#">
+            <svg class="ic" aria-hidden="true"><use href="#ic-wa"/></svg>
+            <span data-i18n="home.cta.appt">{{ i18n.ms["home.cta.appt"] }}</span>
+          </a>
+        </div>
+      </div>
+      <div class="location__map">
+        <iframe title="Peta {{ site.name }}" src="{{ site.mapsEmbed }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% set latest = collections.post | reverseCopy | limit(3) %}
+<section class="section">
+  <div class="wrap">
+    <div class="shead shead--center">
+      <h2 data-i18n="home.blog.title">{{ i18n.ms["home.blog.title"] }}</h2>
+    </div>
+    <div class="bgrid">
+      {% for post in latest %}
+      <article class="bcard">
+        <img class="bcard__img" src="/assets/img/blog-ph.svg" alt="">
+        <div class="bcard__body">
+          <h3 class="bcard__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <p class="bcard__meta">{{ post.date | tarikhBM }}{% if post.data.author %} · {{ post.data.author }}{% endif %}</p>
+          <a class="readmore" href="{{ post.url }}"><span data-i18n="common.readMore">{{ i18n.ms["common.readMore"] }}</span><svg class="ic" aria-hidden="true"><use href="#ic-arrow"/></svg></a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="center" style="margin-top:2.5rem">
+      <a class="btn" href="/blog/" data-i18n="home.blog.all">{{ i18n.ms["home.blog.all"] }}</a>
+    </div>
+  </div>
+</section>

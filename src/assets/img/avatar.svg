@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Foto akan dikemas kini">
+  <rect width="480" height="320" fill="#eef5ff"/>
+  <circle cx="240" cy="250" r="215" fill="#dceafe"/>
+  <path d="M96 320c10-108 70-150 144-150s134 42 144 150Z" fill="#fff"/>
+  <circle cx="240" cy="140" r="72" fill="#ffe0c9"/>
+  <path d="M170 142c0-46 30-74 70-74s70 28 70 68c-18-7-22-18-34-18-19 0-19 14-46 14-15 0-24-4-34-4-14 0-24 7-26 16Z" fill="#07306e"/>
+  <path d="M206 254l34 34 34-34" fill="none" stroke="#3e8cff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="240" cy="296" r="8" fill="#3e8cff"/>
+</svg>

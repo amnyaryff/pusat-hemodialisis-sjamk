@@ -1,0 +1,30 @@
+---
+layout: layouts/page.njk
+permalink: /blog/
+title: Blog
+pageTitleKey: blog.title
+pageIntroKey: blog.intro
+description: "Perkongsian daripada doktor-doktor Pusat Hemodialisis SJAMK."
+---
+
+<section class="section">
+  <div class="wrap">
+    {% set posts = collections.post | reverseCopy %}
+    {% if posts.length %}
+    <div class="bgrid--wide">
+      {% for post in posts %}
+      <article class="bcard">
+        <img class="bcard__img" src="/assets/img/blog-ph.svg" alt="">
+        <div class="bcard__body">
+          <h3 class="bcard__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <p class="bcard__meta">{{ post.date | tarikhBM }}{% if post.data.author %} · {{ post.data.author }}{% endif %}</p>
+          <a class="readmore" href="{{ post.url }}"><span data-i18n="common.readMore">{{ i18n.ms["common.readMore"] }}</span><svg class="ic" aria-hidden="true"><use href="#ic-arrow"/></svg></a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="muted" data-i18n="blog.empty">{{ i18n.ms["blog.empty"] }}</p>
+    {% endif %}
+  </div>
+</section>

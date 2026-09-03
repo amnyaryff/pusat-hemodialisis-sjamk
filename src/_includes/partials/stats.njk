@@ -1,0 +1,18 @@
+<section class="stats" aria-labelledby="stats-title">
+  <div class="wrap">
+    <h2 id="stats-title" data-i18n="home.stats.title">{{ i18n.ms["home.stats.title"] }}</h2>
+    <p class="muted" data-i18n="home.stats.sub">{{ i18n.ms["home.stats.sub"] }}</p>
+    <ul class="stats__grid">
+      {% for s in stats.items %}
+      <li class="stat">
+        <span class="stat__num"
+              data-count="{{ s.value }}"
+              data-prefix-ms="{{ s.prefix_ms }}"
+              data-prefix-en="{{ s.prefix_en }}"
+              data-suffix="{{ s.suffix }}">{{ s.prefix_ms }}{{ s.value }}{{ s.suffix }}</span>
+        <span class="stat__label" data-i18n-obj data-ms="{{ s.label_ms }}" data-en="{{ s.label_en }}">{{ s.label_ms }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

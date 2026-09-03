@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "value": 120, "suffix": "+", "label_ms": "Pesakit dirawat", "label_en": "Patients treated" },
+    { "value": 10, "suffix": "", "label_ms": "Mesin dialisis", "label_en": "Dialysis machines" },
+    { "value": 55, "suffix": "+", "label_ms": "Kapasiti pesakit", "label_en": "Patient capacity" },
+    { "value": 12, "suffix": "", "label_ms": "Tahun berkhidmat sejak 2014", "label_en": "Years of service since 2014" }
+  ]
+}

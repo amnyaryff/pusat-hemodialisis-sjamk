@@ -1,0 +1,53 @@
+---
+layout: layouts/page.njk
+permalink: /tentang/
+title: Tentang Kami
+pageTitleKey: about.title
+description: "Latar belakang, misi, visi dan pensijilan Pusat Hemodialisis SJAMK."
+---
+
+<section class="section">
+  <div class="wrap wrap--narrow">
+    <div class="center">
+      <h2 data-i18n="about.bg.title">{{ i18n.ms["about.bg.title"] }}</h2>
+      <p data-i18n="about.bg.body">{{ i18n.ms["about.bg.body"] }}</p>
+    </div>
+
+    <div class="cards cards--2">
+      <article class="card">
+        <h3 data-i18n="about.mission.title">{{ i18n.ms["about.mission.title"] }}</h3>
+        <p data-i18n="about.mission.body">{{ i18n.ms["about.mission.body"] }}</p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="about.vision.title">{{ i18n.ms["about.vision.title"] }}</h3>
+        <p data-i18n="about.vision.body">{{ i18n.ms["about.vision.body"] }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap splitrow">
+    <div class="splitrow__media">
+      <img src="/assets/img/treatment.jpeg" alt="Pesakit menjalani rawatan hemodialisis di Pusat Hemodialisis SJAMK" loading="lazy" width="749" height="989">
+    </div>
+    <div class="splitrow__body">
+      <h2 data-i18n="about.values.title">{{ i18n.ms["about.values.title"] }}</h2>
+      <div class="cards cards--2">
+        {% for n in ["1", "2", "3", "4"] %}
+        <article class="card card--value">
+          <span class="iconcircle iconcircle--tint iconcircle--sm"><svg class="ic" aria-hidden="true"><use href="#ic-check"/></svg></span>
+          <h3 data-i18n="about.values.{{ n }}">{{ i18n.ms["about.values." + n] }}</h3>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap wrap--narrow center">
+    <h2 data-i18n="about.cert.title">{{ i18n.ms["about.cert.title"] }}</h2>
+    <p data-i18n="about.cert.body">{{ i18n.ms["about.cert.body"] }}</p>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/">
+      <img class="brand__logo" src="/assets/img/logo.svg" alt="" width="34" height="34">
+      <span class="brand__name">{{ site.name }}</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span></span>
+      <span data-i18n="nav.menu">{{ i18n.ms["nav.menu"] }}</span>
+    </button>
+
+    <nav id="primary-nav" class="site-nav" aria-label="Utama">
+      <ul>
+        <li><a href="/perkhidmatan/" class="{{ 'is-active' if page.url == '/perkhidmatan/' }}" data-i18n="nav.services">{{ i18n.ms["nav.services"] }}</a></li>
+        <li><a href="/organisasi/" class="{{ 'is-active' if page.url == '/organisasi/' }}" data-i18n="nav.doctors">{{ i18n.ms["nav.doctors"] }}</a></li>
+        <li><a href="/tentang/" class="{{ 'is-active' if page.url == '/tentang/' }}" data-i18n="nav.about">{{ i18n.ms["nav.about"] }}</a></li>
+        <li><a href="/hubungi/" class="{{ 'is-active' if page.url == '/hubungi/' }}" data-i18n="nav.contact">{{ i18n.ms["nav.contact"] }}</a></li>
+      </ul>
+      <div class="site-nav__actions">
+        <div class="lang-switch" role="group" aria-label="Bahasa / Language">
+          <button type="button" class="lang-switch__opt" data-lang-set="ms">BM</button>
+          <button type="button" class="lang-switch__opt" data-lang-set="en">EN</button>
+        </div>
+        <a class="btn nav-wa" data-wa href="#" aria-label="WhatsApp">
+          <svg class="ic" aria-hidden="true"><use href="#ic-wa"/></svg>
+          <span class="nav-wa__txt" data-i18n="common.wa">{{ i18n.ms["common.wa"] }}</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>

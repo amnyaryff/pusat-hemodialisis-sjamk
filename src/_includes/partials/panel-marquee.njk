@@ -1,0 +1,16 @@
+<div class="pmarquee" aria-label="Panel yang diterima">
+  <ul class="pmarquee__track">
+    {% for p in panel.items %}
+    <li class="pmarquee__item">
+      <img class="pmarquee__logo" src="{{ p.logo }}" alt="">
+      <span>{{ p.name }}</span>
+    </li>
+    {% endfor %}
+    {% for p in panel.items %}
+    <li class="pmarquee__item" aria-hidden="true">
+      <img class="pmarquee__logo" src="{{ p.logo }}" alt="">
+      <span>{{ p.name }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
