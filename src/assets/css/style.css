@@ -215,7 +215,7 @@ p { text-wrap: pretty; }
 .hero__phone .ic { width: 20px; height: 20px; }
 
 .hero__art { position: relative; }
-.hero__art img { width: 100%; border-radius: var(--r-lg); }
+.hero__art img { width: 100%; border-radius: var(--r-lg); aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 40%; }
 .hero__art .hero__badge { position: absolute; left: -8px; bottom: 22px; background: #fff; border-radius: var(--r); box-shadow: var(--shadow); padding: .9rem 1.1rem; display: flex; align-items: center; gap: .7rem; font-size: .82rem; font-weight: 600; color: var(--ink); max-width: 15rem; }
 
 /* hero strip: 3-up card pulled up over the fold */
